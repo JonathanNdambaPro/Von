@@ -3,9 +3,14 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>{% block title %} Von {% endblock %}</title>
 </head>
@@ -21,25 +26,161 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">GitHub<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link active" href="#">CV</a>
-      <a class="nav-item nav-link active" href="#">Contacts</a>
+      <a class="nav-item nav-link active waves-effect" href="#">GitHub<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active waves-effect" href="#">CV</a>
+      <button type="button" class="btn btn-dark" data-toggle="modal" data-target=".bd-example-modal-lg">Contacts</button>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <center>
+            <div class="social-btn">
+                <center>
+                <a href="#" target="_blank"><div class="social in"><i class="fa fa-linkedin  fa-2x"></i><span>Linkedin</span></div></a>
+                <a href="#" target="_blank"><div class="social git"><i class="fa fa-github fa-2x"></i><span>Github</span></div></a>
+                </center>
+            </div>
+            </center>
+        </div>
+      </div>
+    </div>
     </div>
   </div>
 </nav>
 
 </header>
 
+<style>
+
+footer
+{
+  background-color: #343a40!important;
+}
+
+div.social-btn {
+    display: block;
+    width: 665px;
+    margin: 0 auto;
+    text-align: center;
+}
+div.social-btn a {
+    text-decoration: none;
+}
+div.social-btn div {
+    width: 130px;
+    display: inline-block;
+    float: left;
+    height: 120px;
+    line-height: 120px;
+    color: #fff;
+    margin-right: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-shadow:0px 0px 5px #000;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    margin-bottom: 50px;
+}
+div.social-btn a:last-child div {
+    margin-right: 0;
+}
+div.social-btn div:hover, div.social-btn div:active {
+    height: 135px;
+    padding-top: 15px;
+}
+i {
+    -moz-transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+div.face span, div.twi span, div.in span, div.pin span, div.git span{
+    position: absolute;
+    left: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    width: 100px;
+    padding: 0px 15px;
+    opacity: 0;
+    -moz-transition: all 0.6s ease-in;
+    -o-transition: all 0.6s ease-in;
+    -webkit-transition: all 0.6s ease-in;
+    transition: all 0.6s ease-in;
+    line-height: 110px;
+    font-size: 20px;
+}
+div.social-btn div:hover i  {
+    opacity: 0;
+}
+div.social-btn div:hover span {
+    opacity: 1;
+}
+div.face {
+    background: #3A5795;
+    -moz-box-shadow: 0px 4px 0px #1e469d;
+    -webkit-box-shadow: 0px 4px 0px #1e469d;
+    box-shadow: 0px 4px 0px #3e6d8d;
+    position: relative;
+}
+
+div.twi {
+    background: #5EA9DD;
+    -moz-box-shadow: 0px 4px 0px #186ba4;
+    -webkit-box-shadow: 0px 4px 0px #186ba4;
+    box-shadow: 0px 4px 0px #2b95df;
+    position: relative;
+}
+div.in {
+    background: #0177B5;
+    -moz-box-shadow: 0px 4px 0px #035e8e;
+    -webkit-box-shadow: 0px 4px 0px #035e8e;
+    box-shadow: 0px 4px 0px #035e8e;
+    position: relative;
+}
+div.pin {
+    background: #D73532;
+    -webkit-box-shadow: 0px 4px 0px #b51c19;
+    -moz-box-shadow: 0px 4px 0px #b51c19;
+    box-shadow: 0px 4px 0px #b51c19;
+    position: relative;
+}
+div.git {
+    background: #BBBBBB;
+    -webkit-box-shadow: 0px 4px 0px #b51c19;
+    -moz-box-shadow: 0px 4px 0px #b51c19;
+    box-shadow: 0px 4px 0px #9a9a9a;
+    position: relative;
+}
+div.git i {
+    text-shadow: none;
+}
+</style>
+
 
 <body>
 {% block content %}
 {% endblock %}
 
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="https://wallpaperplay.com/walls/full/f/c/d/77609.jpg" class="d-block w-100" style="height: 500px;" alt="...">
+    </div>
+    <div class="carousel-caption d-none d-md-block">
+    <!-- <h5>First slide label</h5> -->
+    <!-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+  </div>
+</div>
+</div>
+
 <div class="container" style="max-width:1500px; min-height:100%">
   <div class="card-deck" style="margin-left: 1rem; margin-right: 1rem;">
 
   <div class="card" style="width: 18rem;">
-    <img src="https://backlog.com/wp-blog-app/uploads/2019/12/Nulab-Gradient-descent-for-linear-regression-using-Golang-Blog.png" class="card-img-top" alt="...">
+      <img  class="card-img-top" src="https://backlog.com/wp-blog-app/uploads/2019/12/Nulab-Gradient-descent-for-linear-regression-using-Golang-Blog.png" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Regression</h5>
       <p class="card-text">Projet gerant les probleme de regression</p>
@@ -71,6 +212,7 @@
           </div>
       </p>
     </div>
+    </a>
   </div>
 
 
@@ -152,6 +294,10 @@
 </div>
 
 
-
 </body>
+
+<footer>
+  <div class="footer-copyright text-center py-3" style="color: white">© 2020 Copyright: Jonathan Ndamba </div>
+</footer>
+
 </html>
