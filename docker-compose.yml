@@ -11,6 +11,6 @@ services:
     build: ./nginx
     container_name: nginx
     environment:
-      - SERVER_NAME=0.0.0.0
+      - SERVER_NAME=15.188.60.220
     restart: always
     network_mode: host
