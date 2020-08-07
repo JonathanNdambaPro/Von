@@ -1,0 +1,15 @@
+FROM ubuntu:18.04
+MAINTAINER jonathan.ndamba.pro@gmail.com
+
+RUN apt-get update -y &&\
+apt-get install python3-pip -y &&\
+apt-get install gunicorn3 -y
+
+
+COPY requirements.txt .
+COPY flaskapp /opt/
+
+RUN pip3 install -r requirements.txt
+WORKDIR /opt/
+
+CMD ["gunicorn3", "-b", "0.0.0.0:8000", "app:app", "--workers=5"]
